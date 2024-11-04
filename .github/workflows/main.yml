@@ -20,10 +20,11 @@ jobs:
       - name: Build docker image
         run: docker build -t prod-service:local .
 
-      - name: Install Docker Compose
+      - name: Install Docker
         run: |
           sudo apt-get update
-          sudo apt-get install -y docker-compose-plugin
+          sudo apt-get install -y docker.io
+          sudo apt-get install -y docker-compose
 
       - name: Docker Compose Up
         run: docker-compose up -d --build
