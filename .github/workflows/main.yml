@@ -26,7 +26,7 @@ jobs:
           sudo sh get-docker.sh
 
       - name: Docker Compose Up
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
